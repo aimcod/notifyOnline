@@ -16,7 +16,7 @@ do
 uptime=`uptime | cut -d" " -f3-5 | cut -d"," -f1`
 srvtime=`uptime | cut -d" " -f2`
 logins=`uptime | cut -d" " -f7-8 | cut -d"," -f1`
-load=`uptime | cut -d":" -f5 | cut -d" " -f2-`
+load=`uptime | cut -d":" -f4 | cut -d" " -f2-`
 users=`who | cut -d' ' -f1-4,14`
 		echo -e "to: example@gmail.com\nSubject:$(hostname) is online.\nPublic IP:\n$ip\n\nLocal Server Time:\n$srvtime\n\nServer Uptime:\n$uptime\n\nUser Login Count:\n$logins\n\nOpen Sessions:\n$users\n\nLoad Average:\n$load" | /usr/sbin/sendmail -t -f root 
 
