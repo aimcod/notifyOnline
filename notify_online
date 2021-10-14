@@ -17,7 +17,7 @@ up=`uptime | cut -d',' -f1`
 logins=`uptime | cut -d',' -f2`
 load=`uptime | cut -d',' -f3-`
 users=`who | cut -d' ' -f1-4,14`
-		echo -e "to: aimcorp2018@gmail.com\nSubject:$(hostname) is online.\nPublic IP is $ip\n\nSERVER TIME/UPTIME: $up\n\nLOGINS: $logins\n$users\n\nLOAD: $load" | /usr/sbin/sendmail -t -f root 
+		echo -e "to: examplex@gmail.com\nSubject:$(hostname) is online.\nPublic IP is $ip\n\nSERVER TIME/UPTIME: $up\n\nLOGINS: $logins\n$users\n\nLOAD: $load" | /usr/sbin/sendmail -t -f root 
 
 		exit 0
 	fi
