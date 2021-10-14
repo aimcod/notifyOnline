@@ -3,7 +3,7 @@
 while [ true ]
 
 do 
-	ping -c 1 google.com &>2
+	ping -c 1 google.com > /dev/null
 
 	if [ $? -ne 0  ]
 	then 
